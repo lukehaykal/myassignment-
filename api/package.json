@@ -1,31 +1,22 @@
 {
-  "name": "api",
-  "version": "0.1.0",
-  "private": true,
+  "name": "escape-api",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "node server.js",
+    "migrate": "sequelize db:migrate",
+    "test": "jest"
   },
   "dependencies": {
-    "next": "16.0.0",
-    "pg-hstore": "^2.3.4",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "sequelize": "^6.37.7",
-    "sqlite3": "^5.1.7"
+    "express": "^4.18.2",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6",
+    "body-parser": "^1.20.2"
   },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@types/sequelize": "^4.28.20",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.0",
-    "sequelize-cli": "^6.6.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+"devDependencies": {
+  "jest": "^29.7.0",
+  "supertest": "^7.0.0"
 }
+
+}
+
